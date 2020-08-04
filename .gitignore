@@ -1,0 +1,6 @@
+marident_venv/
+__pycache__/
+*.sqlite3
+content/
+marident.md
+marident.code-workspace
