@@ -22,3 +22,17 @@ class Procedure(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Inquiry(models.Model):
+    name = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    subject = models.CharField(max_length=100)
+    message = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'inquiries'
+
+    def __str__(self):
+        return self.subject

@@ -8,8 +8,8 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-blue-700 flex flex-col items-center font-mono">
-    <header class="flex justify-center w-full">
+<body class="bg-gray-200 flex flex-col items-center font-mono">
+    <header class="bg-blue-700 flex justify-center w-full">
         <nav class="flex justify-between items-center h-12 w-full max-w-screen-xl px-4 text-white">
             <div class="flex items-center">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,14 +32,14 @@
                 <a href="" class="ml-2 hover:text-green-400">
                     Cennik
                 </a>
-                <a href="" class="ml-2 hover:text-green-400">
+                <a href="{% url 'website:inquiry' %}" class="ml-2 hover:text-green-400">
                     Kontakt
                 </a>
             </div>
         </nav>
     </header>
 
-    <main class="flex flex-col items-center w-full">
+    <main class="flex flex-col items-center w-full text-gray-800">
         {% block content %} {% endblock content %}
     </main>
 </body>
