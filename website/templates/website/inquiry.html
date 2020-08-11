@@ -1,9 +1,12 @@
 {% extends 'website/base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    <table>{{ form.as_table }}</table>
-    <button type="submit">Submit</button>
-</form>
+<div class="bg-gray-700 flex flex-col items-center w-full">
+    <div class="py-4 text-2xl text-white">
+        Umów wizytę
+    </div>
+    {% crispy form %}
+</div>
 {% endblock content %}
