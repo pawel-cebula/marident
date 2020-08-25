@@ -17,6 +17,8 @@ class InquiryForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Define placeholders for all fields using widget attributes
         self.fields['name'].widget.attrs.update(
             {'placeholder': 'Imię i nazwisko'})
         self.fields['phone'].widget.attrs.update(
@@ -28,8 +30,14 @@ class InquiryForm(forms.ModelForm):
         self.fields['message'].widget.attrs.update(
             {'placeholder': 'Wiadomość'})
         self.helper = FormHelper()
+
+        # Hides form labels but probably hides them for screen readers too?
         self.helper.form_show_labels = False
+
+        # Custom variable to define shared classes for Fields below
         self.input_class = 'bg-gray-600 w-full my-2 px-4 py-2 border border-gray-200'
+
+        # Form defined using crispy forms Layouts
         self.helper.layout = Layout(
             Div(
                 Field('name', css_class=self.input_class),
