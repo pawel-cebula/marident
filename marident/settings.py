@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # External apps
     'crispy_forms',
+    'django_tables2',
 ]
 
 MIDDLEWARE = [

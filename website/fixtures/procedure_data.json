@@ -1,0 +1,128 @@
+[
+    {
+        "model": "website.procedure",
+        "pk": 1,
+        "fields": {
+            "name": "Konsultacja",
+            "price": "100",
+            "category": "CONS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 2,
+        "fields": {
+            "name": "Wypełnienie",
+            "price": "100-200",
+            "category": "CONS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 3,
+        "fields": {
+            "name": "Leczenie kanałowe (1 kanał)",
+            "price": "200",
+            "category": "ENDO"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 4,
+        "fields": {
+            "name": "Leczenie kanałowe (2 kanały)",
+            "price": "300",
+            "category": "ENDO"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 5,
+        "fields": {
+            "name": "Konsultacja",
+            "price": "400",
+            "category": "ENDO"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 6,
+        "fields": {
+            "name": "Odbudowa zęba",
+            "price": "250",
+            "category": "CONS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 7,
+        "fields": {
+            "name": "Wybielanie (1 wizyta)",
+            "price": "800",
+            "category": "CONS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 8,
+        "fields": {
+            "name": "Usunięcie zęba",
+            "price": "150-200",
+            "category": "SURG"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 9,
+        "fields": {
+            "name": "Chirurgiczne usunięcie zęba",
+            "price": "400",
+            "category": "SURG"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 10,
+        "fields": {
+            "name": "Korona ceramiczna",
+            "price": "1500",
+            "category": "PROS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 11,
+        "fields": {
+            "name": "Korona matalowo-porcelanowa",
+            "price": "600-700",
+            "category": "PROS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 12,
+        "fields": {
+            "name": "Proteza acetalowa",
+            "price": "1500",
+            "category": "PROS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 13,
+        "fields": {
+            "name": "Proteza szkieletowa",
+            "price": "1400-2500",
+            "category": "PROS"
+        }
+    },
+    {
+        "model": "website.procedure",
+        "pk": 14,
+        "fields": {
+            "name": "Proteza akrylowa",
+            "price": "900",
+            "category": "PROS"
+        }
+    }
+]

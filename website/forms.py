@@ -35,7 +35,7 @@ class InquiryForm(forms.ModelForm):
         self.helper.form_show_labels = False
 
         # Custom variable to define shared classes for Fields below
-        self.input_class = 'bg-gray-600 w-full my-2 px-4 py-2 border border-gray-200'
+        self.input_class = 'bg-white w-full my-2 px-4 py-2 border border-gray-400'
 
         # Form defined using crispy forms Layouts
         self.helper.layout = Layout(
@@ -46,7 +46,7 @@ class InquiryForm(forms.ModelForm):
                 Field('subject', css_class=self.input_class),
                 Field('message', css_class=self.input_class),
                 Submit('submit', 'Wyślij zapytanie',
-                       css_class='bg-green-400 self-center px-4 py-2 text-xl text-white font-bold'),
-                css_class='flex flex-col',
+                       css_class='bg-green-400 self-center px-4 py-2 text-xl text-white'),
+                css_class='flex flex-col py-8',
             ),
         )
