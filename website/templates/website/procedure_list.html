@@ -2,5 +2,12 @@
 {% load render_table from django_tables2 %}
 
 {% block content %}
+
+<div class="flex flex-col items-center w-full max-w-screen-xl px-4 py-6">
+    <div class="w-full text-2xl text-blue-700 border-b-2 border-gray-400">
+        Cennik
+    </div>
+</div>
+
 {% render_table table %}
 {% endblock content %}

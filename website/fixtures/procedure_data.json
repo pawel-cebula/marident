@@ -39,7 +39,7 @@
         "model": "website.procedure",
         "pk": 5,
         "fields": {
-            "name": "Konsultacja",
+            "name": "Leczenie kanałowe (3 kanały)",
             "price": "400",
             "category": "ENDO"
         }
