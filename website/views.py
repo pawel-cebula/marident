@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import CreateView
 from django_tables2 import SingleTableView
 from .models import Inquiry, Procedure
@@ -12,7 +14,7 @@ def index(request):
     return render(request, 'website/index.html')
 
 
-class InquiryFormView(CreateView):
+class InquiryFormView(SuccessMessageMixin, CreateView):
     model = Inquiry
     form_class = InquiryForm
     template_name = 'website/inquiry.html'
@@ -30,12 +32,14 @@ class InquiryFormView(CreateView):
 
         form.save()
 
+        messages.success(self.request, "Zapytanie zostało wysłane")
+
         try:
             send_mail(subject, email_content, from_email, [
                       'ptcebula@gmail.com'], fail_silently=False)
         except BadHeaderError:
             return HttpResponse('Invalid header found')
-        return redirect('website:index')
+        return redirect('website:inquiry')
 
 
 class ProcedureList(SingleTableView):
