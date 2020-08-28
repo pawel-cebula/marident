@@ -125,3 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'marident.szczecin@gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
