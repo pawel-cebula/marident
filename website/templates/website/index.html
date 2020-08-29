@@ -4,14 +4,15 @@
 
 {% block content %}
 <div class="bg-blue-700 flex flex-col items-center w-full border-b-4 border-green-400">
-    <div class="flex flex-col items-start w-full max-w-screen-xl px-4 text-white">
+    <div
+        class="flex flex-col items-center md:items-start w-full max-w-screen-xl px-4 text-center md:text-left text-white">
         <div class="mt-8 text-3xl font-bold">
             Gabinet stomatologii zachowawczej
         </div>
         <div class="text-lg">
             Kompleksowa opieka stomatologiczna w centrum Szczecina
         </div>
-        <a href="" class="bg-green-400 mt-4 mb-8 px-4 py-2 text-lg">
+        <a href="{% url 'website:inquiry' %}" class="bg-green-400 mt-4 mb-8 px-4 py-2 text-lg">
             Umów wizytę
         </a>
     </div>
@@ -19,11 +20,11 @@
 
 <div class="bg-gray-200 flex flex-col items-center w-full">
     <div class="flex flex-col w-full max-w-screen-xl px-4 py-6">
-        <div class="w-full text-2xl text-blue-700 border-b-2 border-gray-400">
+        <div class="w-full text-center md:text-left text-2xl text-blue-700 border-b-2 border-gray-400">
             Zakres usług
         </div>
-        <div class="flex justify-between mt-6 text-center font-bold">
-            <div class="bg-white flex flex-col items-center w-1/5 border-b-4 border-green-400 px-4 py-8">
+        <div class="flex flex-wrap justify-between text-center font-bold">
+            <div class="bg-white flex flex-col items-center w-2/5 md:w-1/5 border-b-4 border-green-400 mt-6 px-4 py-8">
                 <div>
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0)">
@@ -48,7 +49,7 @@
                     Stomatologia zachowawcza
                 </div>
             </div>
-            <div class="bg-white flex flex-col items-center w-1/5 border-b-4 border-green-400 px-4 py-8">
+            <div class="bg-white flex flex-col items-center w-2/5 md:w-1/5 border-b-4 border-green-400 mt-6 px-4 py-8">
                 <div>
                     <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0)">
@@ -67,7 +68,7 @@
                     Endodoncja
                 </div>
             </div>
-            <div class="bg-white flex flex-col items-center w-1/5 border-b-4 border-green-400 px-4 py-8">
+            <div class="bg-white flex flex-col items-center w-2/5 md:w-1/5 border-b-4 border-green-400 mt-6 px-4 py-8">
                 <div>
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0)">
@@ -95,7 +96,7 @@
                     Chirurgia stomatologiczna
                 </div>
             </div>
-            <div class="bg-white flex flex-col items-center w-1/5 border-b-4 border-green-400 px-4 py-8">
+            <div class="bg-white flex flex-col items-center w-2/5 md:w-1/5 border-b-4 border-green-400 mt-6 px-4 py-8">
                 <div>
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -123,13 +124,13 @@
     </div>
 
     <div class="flex flex-col w-full max-w-screen-xl px-4 py-6">
-        <div class="w-full text-2xl text-blue-700 border-b-2 border-gray-400">
+        <div class="w-full text-center md:text-left text-2xl text-blue-700 border-b-2 border-gray-400">
             Nasz zespół
         </div>
-        <div class="flex mt-6">
+        <div class="flex flex-col md:flex-row items-center">
             <img src="{% static "website/profile.jpg" %}" alt="Maria Młyniec"
-                class="h-64 rounded-full border-4 border-4 border-blue-700">
-            <div class="bg-white w-full ml-8 px-4">
+                class="h-64 w-64 rounded-full mt-6 border-4 border-4 border-blue-700">
+            <div class="bg-white w-full md:ml-8 mt-6 px-4 text-center md:text-left">
                 <div class="font-bold text-xl my-4">
                     lek. stom. Maria Młyniec
                 </div>
@@ -149,30 +150,30 @@
     </div>
 
     <div class="flex flex-col w-full max-w-screen-xl px-4 py-6">
-        <div class="w-full text-2xl text-blue-700 border-b-2 border-gray-400">
+        <div class="w-full text-center md:text-left text-2xl text-blue-700 border-b-2 border-gray-400">
             Nasz gabinet
         </div>
         <div class="flex flex-col">
-            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row justify-between">
                 <div
-                    class="bg-white flex flex-col justify-center items-center h-64 w-5/12 my-4 border-b-4 border-green-400">
+                    class="bg-white flex flex-col justify-center items-center h-64 w-full md:w-5/12 my-4 border-b-4 border-green-400">
                     <div class="font-bold mb-4">Godziny otwarcia:</div>
                     <div>Poniedziałek: 15:00 - 20:00</div>
                     <div>Wtorek: 10:00 - 15:00</div>
                     <div>Czwartek: 15:00 - 20:00</div>
                 </div>
-                <div class="bg-white h-64 w-5/12 my-4">
+                <div class="bg-white h-64 w-full md:w-5/12 my-4">
                     <img class="w-full h-64 object-cover" src="{% static "website/gabinet.jpg" %}" alt="">
                 </div>
             </div>
-            <div class="flex justify-between">
-                <div class="bg-white h-64 w-5/12 my-4">
+            <div class="flex flex-col-reverse md:flex-row justify-between">
+                <div class="bg-white h-64 w-full md:w-5/12 my-4">
                     <iframe class="w-full h-64 object-cover"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.5693898319396!2d14.538322815841306!3d53.422526879995054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09188cc7c28d%3A0x863bc618d113881b!2sKamienica%20Nova%2C%20Mariana%20Langiewicza%2028%2C%2070-240%20Szczecin%2C%20Poland!5e0!3m2!1sen!2sde!4v1596809947572!5m2!1sen!2sde"
                         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div
-                    class="bg-white flex flex-col justify-center items-center h-64 w-5/12 my-4 border-b-4 border-green-400">
+                    class="bg-white flex flex-col justify-center items-center h-64 w-full md:w-5/12 my-4 border-b-4 border-green-400">
                     <div class="font-bold mb-4">Adres:</div>
                     <div>Kamienica Nova</div>
                     <div>Mariana Langiewicza 28/7</div>
@@ -187,11 +188,11 @@
     </div>
 
     <div class="flex flex-col w-full max-w-screen-xl px-4 py-6">
-        <div class="w-full text-2xl text-blue-700 border-b-2 border-gray-400">
+        <div class="w-full text-center md:text-left text-2xl text-blue-700 border-b-2 border-gray-400">
             Nasi pacjenci
         </div>
-        <div class="flex justify-between">
-            <div class="flex flex-col items-center w-1/4 mt-6">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col items-center w-full md:w-1/4 mt-6">
                 <div>
                     <img class="h-24 w-24 rounded-full object-cover border-4 border-blue-700"
                         src="{% static "website/pacjent1.jpg" %}" alt="">
@@ -207,7 +208,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col items-center w-1/4 mt-6">
+            <div class="flex flex-col items-center w-full md:w-1/4 mt-6">
                 <div>
                     <img class="h-24 w-24 rounded-full object-cover border-4 border-blue-700"
                         src="{% static "website/pacjent2.jpg" %}" alt="">
@@ -223,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col items-center w-1/4 mt-6">
+            <div class="flex flex-col items-center w-full md:w-1/4 mt-6">
                 <div>
                     <img class="h-24 w-24 rounded-full object-cover border-4 border-blue-700"
                         src="{% static "website/pacjent3.jpg" %}" alt="">
