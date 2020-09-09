@@ -4,7 +4,7 @@ dj-database-url==0.5.0
 Django==3.0.9
 django-crispy-forms==1.9.2
 django-heroku==0.3.1
--e git+https://github.com/pawel-123/marident.git@42ad6330868d3ccf233d6fbd3178691fb6f7051d#egg=django_tables2&subdirectory=django-tables2-master
+-e ./django-tables2-master
 gunicorn==20.0.4
 psycopg2==2.8.5
 pycodestyle==2.6.0
